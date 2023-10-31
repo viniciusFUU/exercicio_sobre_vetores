@@ -1,10 +1,13 @@
-lista = []
+lista = [None] * 20
 
-for i in range(1, 15 + 1):
-    num = int(input(f"Digite o {i}º número da lista: "))
-    lista.append(num)
+for i in range(20):
+    print(f"Digite o {i}º número: ")
+    lista[i] = int(input())
 
-    if i % 2 == 0:
-        print(f"{lista[-1]} é par.")
+for i in range(20):
+    print(f"{i + 1} - {lista[i]}")
+
+    if lista[i] % 2 == 0:
+        print("Par")
     else:
-        print(f"{lista[-1]} é impar.")
+        print("Impar")
